@@ -42,12 +42,12 @@ function setup() {
   r2y = 220; // 外椭圆的y轴半径
 
   sections = [
-    { label: "Deep learning paradigms", color: '#C0504D', start: 0, end: 50, url: "../paradigms" },
-    { label: "Multimodal data integration", color: '#8064A2', start: 50, end: 130, url: "../multimodal" },
-    { label: "Trustworthy AI for healthcare", color: '#F79646', start: 130, end: 180, url: "../trustAI" },
-    { label: "Computational microscopy", color: '#9BBB59', start: 180, end: 230, url: "../c_micro" },
-    { label: "Computational histopathology", color: '#5A9BD3', start: 230, end: 310, url: "../c_hist" },
-    { label: "Computational neuroscience", color: '#4BACC6', start: 310, end: 360, url: "../c_neru" },
+    { label: "Deep learning paradigms", color: '#C0504D', start: 0, end: 50, url: "../pages/c_paradigms" },
+    { label: "Multimodal data integration", color: '#8064A2', start: 50, end: 130, url: "../pages/c_multimodal" },
+    { label: "Trustworthy AI for healthcare", color: '#F79646', start: 130, end: 180, url: "../pages/c_trustAI" },
+    { label: "Computational microscopy", color: '#9BBB59', start: 180, end: 230, url: "../pages/c_micro" },
+    { label: "Computational histopathology", color: '#5A9BD3', start: 230, end: 310, url: "../pages/c_hist" },
+    { label: "Computational neuroscience", color: '#4BACC6', start: 310, end: 360, url: "../pages/c_neru" },
   ];
   
   setInterval(function() {
