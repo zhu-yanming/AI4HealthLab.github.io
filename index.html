@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="head-placeholder"></head>
+<script>
+  fetch('my_head.html')
+    .then(res => res.text())
+    .then(data => {
+      document.head.innerHTML = data;
+    });
+</script>
+
+
+<body id="page_top">
+  <div id="navbar-placeholder"></div>
+
+  <section id="welcome-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mx-auto text-left">
+          <h2 class="section-heading-noBackground text-center">AI4Health
+            Lab</h2>
+
+          <p class="mb-4">The AI4Health Lab, in the School of Information
+            Communication and Technology at Griffith University, stands at the
+            forefront of AI applications in the biomedical and health fields.
+            Committed to excellence and innovation, we strive to address major
+            challenges in contemporary medicine and public health through the
+            deep integration of AI and health sciences. Our research spans
+            computational pathology, computational neuroscience, computational
+            microscopy imaging, bio-health multimodal data integration, deep
+            learning paradigms, and trustworthy AI for healthcare. We are
+            dedicated to tackling core challenges in precision and intelligent
+            medicine, enhancing the accuracy of disease diagnosis, optimizing
+            personalized treatment plans, and advancing the fairness and
+            explainability of medical decisions. With our interdisciplinary
+            research team and exceptional innovation capabilities, the
+            AI4Health Lab aims to become a global leader in AI and health
+            research. We believe that artificial intelligence will reshape the
+            future of healthcare, and we are committed to leading this
+            transformation, ushering in a new era of technological advancement
+            and human well-being.
+          </p>
+
+        </div>
+      </div>
+
+  </section>
+
+  <section id="visual-section">
+    <div class="container">
+      <div id="p5-sketch"></div>
+    </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="js/plot_disgram.js"></script>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/creative.min.js"></script>
+
+  <script>
+    fetch("my_navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll(".nav-link[data-page]").forEach(link => {
+          if (link.getAttribute("data-page") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      });
+  </script>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("my_footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+
+
+</body>
+
+</html>
