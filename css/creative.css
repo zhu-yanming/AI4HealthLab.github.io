@@ -462,6 +462,13 @@ body {
 }
 
 
+.container-plotInIndex {
+  width: 70%;
+  margin: -240px auto;
+  max-width: 1600px !important;
+}
+
+
 .csl-bib-body {
   font-family: "Georgia", serif;
   font-size: 16px;
