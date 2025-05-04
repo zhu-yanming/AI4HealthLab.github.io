@@ -1,10 +1,11 @@
 let cx, cy, r1x, r1y, r2x, r2y, canvas;
 let hoveredIndex = -1;
-let w_width, w_height;
 let img_logo;
 let clockAngles = [0, 40, 180 - 40, 180, 180 + 40, 270 + 50];
 
 let logoHovered = false;
+let w_width = 600;
+let w_height = 600; 
 
 let sections = [
   {
@@ -47,10 +48,12 @@ function preload() {
 }
 
 function setup() {
-  w_width = windowWidth > 600 ? 600 : windowWidth * 0.9;
-  w_height = windowHeight > 600 ? 600 : windowHeight * 0.9;
+  // w_width = windowWidth > 600 ? 600 : windowWidth * 0.9;
+  // w_height = windowHeight > 600 ? 600 : windowHeight * 0.9;
   canvas = createCanvas(w_width, w_height);
   canvas.parent("p5-sketch");
+  canvas.style('display', 'block');
+  canvas.style('margin', '0 auto');
 
   angleMode(DEGREES);
   textAlign(CENTER, CENTER);
@@ -164,8 +167,8 @@ function mousePressed() {
 
 
 function windowResized() {
-  w_width = windowWidth > 600 ? 600 : windowWidth * 0.9;
-  w_height = windowHeight > 600 ? 600 : windowHeight * 0.9;
+  // w_width = windowWidth > 600 ? 600 : windowWidth * 0.9;
+  // w_height = windowHeight > 600 ? 600 : windowHeight * 0.9;
   resizeCanvas(w_width, w_height);
   updateCenterAndRadii();
 }
