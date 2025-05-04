@@ -1,2 +1,2 @@
-# pdcatconf2025
-https://www.pd-cat.org/
+# AI4Health @ ICT, Griffith
+[https://www.pd-cat.org/](https://ai4healthlab.github.io/)
