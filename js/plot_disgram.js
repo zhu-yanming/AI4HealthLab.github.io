@@ -157,7 +157,7 @@ function mousePressed() {
       mouseY <= cy + logoH / 2
     ) {
       // 跳转到页面顶部锚点
-      window.location.href = "1_research.html#page_top";
+      window.location.href = "index.html#page_top";
     }
   }
 }
