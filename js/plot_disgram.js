@@ -1,13 +1,26 @@
-let cx, cy, r1x, r1y, r2x, r2y, canvas;
+let canvas;
+let w_width = 700;
+let w_height = 400;
+
+let cx = w_width * 0.5;
+let cy = w_height * 0.5;
+
+let half_w = w_width * 0.5;
+let half_h = w_height * 0.5;
+let icon_size = 120;
+let logo_size = 300;
 let hoveredIndex = -1;
-let img_logo;
-let clockAngles = [0, 40, 180 - 40, 180, 180 + 40, 270 + 50];
+let clockAngles = [0, 0, 45, 180 - 45, 180, 180 + 45, 0 - 45];
 
 let logoHovered = false;
-let w_width = 600;
-let w_height = 600; 
 
 let sections = [
+  {
+    label: "AI4Health",
+    url: "index.html#page_top",
+    iconPath: "img/icons/Ai4Health_.png"
+  },
+
   {
     label: "Deep Learning Paradigms",
     url: "1_research.html#c_paradigms",
@@ -41,15 +54,12 @@ let sections = [
 ];
 
 function preload() {
-  img_logo = loadImage("img/icons/Ai4Health_.png");
   for (let i = 0; i < sections.length; i++) {
     sections[i].icon = loadImage(sections[i].iconPath);
   }
 }
 
 function setup() {
-  // w_width = windowWidth > 600 ? 600 : windowWidth * 0.9;
-  // w_height = windowHeight > 600 ? 600 : windowHeight * 0.9;
   canvas = createCanvas(w_width, w_height);
   canvas.parent("p5-sketch");
   canvas.style('display', 'block');
@@ -59,25 +69,34 @@ function setup() {
   textAlign(CENTER, CENTER);
   imageMode(CENTER);
 
-  updateCenterAndRadii();
-
   setInterval(() => mouseMoved(), 100);
 }
+
+
 function draw() {
   clear();
+  let x, y;
 
   for (let i = 0; i < sections.length; i++) {
     let angle = clockAngles[i];
     let isHovered = i === hoveredIndex;
-    let scaleFactor = isHovered ? 1.2 : 1.0;
+    let scaleFactor = isHovered ? 1.1 : 1.0;
 
-    let x = cx + r2x * 0.75 * cos(angle);
-    let y = cy + r2y * 0.75 * sin(angle);
+    if (i == 0) {
+      x = cx;
+      y = cy;
+      img_size = logo_size;
+    }
+    else {
+      x = cx + half_w * 0.78 * cos(angle);
+      y = cy + half_h * 0.78 * sin(angle);
+      img_size = icon_size;
+    }
 
     let img = sections[i].icon;
     if (img) {
       let aspect = img.width / img.height;
-      let imgH = 130 * scaleFactor;
+      let imgH = img_size * scaleFactor;
       let imgW = imgH * aspect;
       image(img, x, y, imgW, imgH);
 
@@ -89,67 +108,49 @@ function draw() {
     }
   }
 
-  // draw center logo
-  if (img_logo) {
-    let ar = img_logo.height / img_logo.width;
-    let logoW = 300;
-    if (logoHovered) {
-      logoW *= 1.1;  // 放大 1.2 倍
-    }
-    let logoH = logoW * ar;
-    image(img_logo, cx, cy, logoW, logoH);
-  }
-
 }
 
 function updateHoveredSection() {
   hoveredIndex = -1;
+  let x, y, threshold;
+
   for (let i = 0; i < sections.length; i++) {
     let angle = clockAngles[i];
-    let x = cx + r2x * 0.75 * cos(angle);
-    let y = cy + r2y * 0.75 * sin(angle);
-    if (dist(mouseX, mouseY, x, y) < 60) {
+
+    if (i == 0) {
+      x = cx;
+      y = cy;
+      threshold = logo_size * 0.5;
+    }
+    else {
+      x = cx + half_w * 0.78 * cos(angle);
+      y = cy + half_h * 0.78 * sin(angle);
+      threshold = icon_size * 0.5;
+    }
+    if (dist(mouseX, mouseY, x, y) < threshold) {
       hoveredIndex = i;
       break;
     }
-  }
-}
 
-function updateHoveredLogo() {
-  logoHovered = false;
-  if (img_logo) {
-    let ar = img_logo.height / img_logo.width;
-    let logoW = 300;
-    let logoH = logoW * ar;
-    if (
-      mouseX >= cx - logoW / 2 &&
-      mouseX <= cx + logoW / 2 &&
-      mouseY >= cy - logoH / 2 &&
-      mouseY <= cy + logoH / 2
-    ) {
-      logoHovered = true;
-    }
   }
 }
 
 
 function mouseMoved() {
   updateHoveredSection();
-  updateHoveredLogo();
 }
 
 function mousePressed() {
   // 点击图标
   if (hoveredIndex !== -1) {
     window.location.href = sections[hoveredIndex].url;
-    //   window.open(sections[hoveredIndex].url, "_blank");
     return;
   }
 
   // 点击中间 logo
   if (img_logo) {
     let ar = img_logo.height / img_logo.width;
-    let logoW = 300;
+    let logoW = img_logo_size;
     let logoH = logoW * ar;
 
     // 判断鼠标是否落在 logo 区域
@@ -165,19 +166,8 @@ function mousePressed() {
   }
 }
 
-
 function windowResized() {
-  // w_width = windowWidth > 600 ? 600 : windowWidth * 0.9;
-  // w_height = windowHeight > 600 ? 600 : windowHeight * 0.9;
   resizeCanvas(w_width, w_height);
   updateCenterAndRadii();
 }
 
-function updateCenterAndRadii() {
-  cx = width / 2;
-  cy = height / 2;
-  r1x = width * 0.15;
-  r1y = height * 0.15;
-  r2x = width * 0.5;
-  r2y = height * 0.5;
-}
