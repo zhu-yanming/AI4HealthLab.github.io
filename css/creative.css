@@ -114,6 +114,7 @@ img::selection {
 
 body {
   padding-top: 80px; /* 避免固定导航栏遮挡 */
+  padding-bottom: 80px;
 }
 
 
