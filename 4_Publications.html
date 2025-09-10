@@ -68,7 +68,7 @@
 <div id="pubs-container"></div>
 
 <script>
-fetch('pubs_harvard.html')
+fetch('pubs_IEEE.html')
   .then(response => response.text())
   .then(html => {
     const tempDiv = document.createElement('div');
@@ -77,12 +77,20 @@ fetch('pubs_harvard.html')
     // 获取所有 .csl-entry 项
     const entries = Array.from(tempDiv.querySelectorAll('.csl-entry'));
 
-    // 提取年份，排序（降序）
-    const yearRegex = /\((\d{4})\)/;
+    // 移除每条记录中的序号（通常是 .csl-left-margin）
+    entries.forEach(entry => {
+      const leftMargin = entry.querySelector('.csl-left-margin');
+      if (leftMargin) {
+        leftMargin.remove(); // 删除序号
+      }
+    });
+
+    // 提取年份并排序（降序）
+    const yearRegex = /\b(19|20)\d{2}\b/;
     entries.sort((a, b) => {
-      const yearA = parseInt((a.innerHTML.match(yearRegex) || [])[1] || '0', 10);
-      const yearB = parseInt((b.innerHTML.match(yearRegex) || [])[1] || '0', 10);
-      return yearB - yearA; // 降序排序
+      const yearA = parseInt((a.innerHTML.match(yearRegex) || [])[0] || '0', 10);
+      const yearB = parseInt((b.innerHTML.match(yearRegex) || [])[0] || '0', 10);
+      return yearB - yearA;
     });
 
     // 转换纯文本 https 为可点击链接
@@ -97,8 +105,9 @@ fetch('pubs_harvard.html')
     const container = document.getElementById('pubs-container');
     entries.forEach(entry => container.appendChild(entry));
   })
-  .catch(err => console.error('Failed to load pubs.html:', err));
+  .catch(err => console.error('Failed to load pubs_IEEE.html:', err));
 </script>
+
 
 
 </body>
