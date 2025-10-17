@@ -52,3 +52,33 @@
 
 <!-- Custom styles -->
 <link href="css/creative.css" rel="stylesheet">
+
+
+<style>
+  /* 左图右文的版式与细节 */
+  .topic-block .topic-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .topic-block .topic-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0,0,0,.08);
+    object-fit: cover;
+  }
+  .topic-block .topic-caption {
+    font-size: .88rem;
+    opacity: .8;
+    margin-top: 4px;
+  }
+  /* 桌面端让左侧列随滚动保持在视口内的上方 */
+  @media (min-width: 992px) {
+    .topic-block .topic-sticky {
+      position: sticky;
+      top: 100px;
+    }
+  }
+</style>
+
