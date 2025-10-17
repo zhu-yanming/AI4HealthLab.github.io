@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head id="head-placeholder"></head>
-  <script>
+<head id="head-placeholder"></head>
+<script>
   fetch('my_head.html')
     .then(res => res.text())
     .then(data => {
@@ -10,81 +10,150 @@
     });
 </script>
 
-  <body id="page_top">
-    <div id="navbar-placeholder"></div>
+<body id="page_top">
+  <div id="navbar-placeholder"></div>
 
-    <section id="visual-section">
-      <div class="container">
-        <div id="p5-sketch"></div>
+  <section id="visual-section">
+    <div class="container">
+      <div id="p5-sketch"></div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <!-- <script src="js/plot_areas.js"></script> -->
+  <script src="js/plot_disgram.js"></script>
+
+  <section id="c_hist">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mx-auto text-left">
+          <h2 class="section-heading">Computational histopathology</h2>
+
+        </div>
       </div>
-    </section>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-    <!-- <script src="js/plot_areas.js"></script> -->
-    <script src="js/plot_disgram.js"></script>
+      <!-- <a href="img/research/Computational_histopathology.png" class="image-link" title="H&E 切片局部与细胞核分割">
+                <img class="topic-img" src="img/research/Computational_histopathology.png" alt="H&E 切片局部与细胞核分割">
+              </a> -->
 
-    <section id="c_hist">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 mx-auto text-left">
-            <h2 class="section-heading">Computational histopathology</h2>
+      <div class="row topic-block align-items-start">
+        <div class="col-lg-4 col-md-5 mb-4 topic-sticky">
+          <div class="topic-gallery">
+            <!-- <a href="img/research/c_hist/1-1.png" class="image-link">
+              <img class="topic-img" src="img/research/c_hist/1-1.png">
+            </a> -->
+            <!-- <div class="topic-caption">H&E 局部视野与核分割示例</div> -->
 
-            <p class="mb-4">Computational histopathology represents a critical
-              frontier in the use of AI for cancer
-              diagnosis and prognosis, focusing on the extraction of phenotypic
-              information from histopathology images.
-              This field encompasses a range of tasks, including cell nuclei
-              segmentation, tumor detection, biomarker
-              analysis, and survival prediction, all of which play a vital role
-              in understanding the morphological and
-              molecular characteristics of cancer.
+            <a href="img/research/c_hist/1-2.png" class="image-link">
+              <img class="topic-img" src="img/research/c_hist/1-2.png">
+            </a>
+            <!-- <div class="topic-caption">弱监督热力图与病灶定位</div> -->
 
-              Our research at the AI4Health Lab primarily focuses on developing
-              advanced deep learning models to address
-              the significant challenges posed by the inherent limitations of
-              histopathology data. One of the key
-              challenges is the small size of training datasets, which can
-              hinder the performance and generalization of AI
-              models. To overcome this, we explore innovative techniques such as
-              transfer learning, data augmentation, and
-              generative models to maximize the utility of limited data.
+            <a href="img/research/c_hist/2-1.png" class="image-link">
+              <img class="topic-img" src="img/research/c_hist/2-1.png">
+            </a>
 
-              Another major challenge is the presence of noisy and coarse ground
-              truth annotations, which can introduce
-              inaccuracies in model training. Our work in this area involves
-              developing robust algorithms that can learn
-              from imperfect data, leveraging weakly supervised and
-              semi-supervised learning approaches to enhance model
-              performance despite annotation quality issues.
+            <a href="img/research/c_hist/2-2.png" class="image-link">
+              <img class="topic-img" src="img/research/c_hist/2-2.png">
+            </a>
 
-              Additionally, the high heterogeneity in histopathology data,
-              caused by variations in staining, imaging
-              conditions, and biological diversity, presents significant
-              obstacles in achieving consistent and accurate
-              predictions. Our research tackles this by designing models that
-              are resilient to such variability, employing
-              domain adaptation techniques and exploring the use of multi-modal
-              data to capture a more comprehensive
-              representation of the tissue microenvironment.
-
-              Through these efforts, we aim to advance the field of
-              computational histopathology, enabling more accurate
-              and reliable AI-driven tools for cancer diagnosis and prognosis.
-              Our goal is to bridge the gap between
-              cutting-edge AI technology and practical clinical applications,
-              ultimately contributing to more personalized
-              and effective cancer treatment strategies.
-            </p>
           </div>
         </div>
-      </section>
 
-      <section id="c_neru">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 mx-auto text-left">
-              <h2 class="section-heading">Computational Neuroscience</h2>
+        <div class="col-lg-8 col-md-7">
+          <p>Computational histopathology represents a critical
+            frontier in the use of AI for cancer
+            diagnosis and prognosis, focusing on the extraction of phenotypic
+            information from histopathology images.
+            This field encompasses a range of tasks, including cell nuclei
+            segmentation, tumor detection, biomarker
+            analysis, and survival prediction, all of which play a vital role
+            in understanding the morphological and
+            molecular characteristics of cancer.
+
+            Our research at the AI4Health Lab primarily focuses on developing
+            advanced deep learning models to address
+            the significant challenges posed by the inherent limitations of
+            histopathology data. One of the key
+            challenges is the small size of training datasets, which can
+            hinder the performance and generalization of AI
+            models. To overcome this, we explore innovative techniques such as
+            transfer learning, data augmentation, and
+            generative models to maximize the utility of limited data.
+
+            Another major challenge is the presence of noisy and coarse ground
+            truth annotations, which can introduce
+            inaccuracies in model training. Our work in this area involves
+            developing robust algorithms that can learn
+            from imperfect data, leveraging weakly supervised and
+            semi-supervised learning approaches to enhance model
+            performance despite annotation quality issues.
+
+            Additionally, the high heterogeneity in histopathology data,
+            caused by variations in staining, imaging
+            conditions, and biological diversity, presents significant
+            obstacles in achieving consistent and accurate
+            predictions. Our research tackles this by designing models that
+            are resilient to such variability, employing
+            domain adaptation techniques and exploring the use of multi-modal
+            data to capture a more comprehensive
+            representation of the tissue microenvironment.
+
+            Through these efforts, we aim to advance the field of
+            computational histopathology, enabling more accurate
+            and reliable AI-driven tools for cancer diagnosis and prognosis.
+            Our goal is to bridge the gap between
+            cutting-edge AI technology and practical clinical applications,
+            ultimately contributing to more personalized
+            and effective cancer treatment strategies.
+          </p>
+        </div>
+
+  </section>
+
+  <section id="c_neru">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mx-auto text-left">
+          <h2 class="section-heading">Computational Neuroscience</h2>
+
+          <div class="row topic-block align-items-start">
+            <div class="col-lg-4 col-md-5 mb-4 topic-sticky">
+              <div class="topic-gallery">
+                <a href="img/research/c_neru/1-1.png" class="image-link">
+                  <img class="topic-img" src="img/research/c_neru/1-1.png">
+                </a>
+                <!-- <div class="topic-caption">H&E 局部视野与核分割示例</div> -->
+
+                <a href="img/research/c_neru/1-2.png" class="image-link">
+                  <img class="topic-img" src="img/research/c_neru/1-2.png">
+                </a>
+                <!-- <div class="topic-caption">弱监督热力图与病灶定位</div> -->
+                <a href="img/research/c_neru/1-3.png" class="image-link">
+                  <img class="topic-img" src="img/research/c_neru/1-3.png">
+                </a>
+
+                <a href="img/research/c_neru/2-1.png" class="image-link">
+                  <img class="topic-img" src="img/research/c_neru/2-1.png">
+                </a>
+
+                <!-- <a href="img/research/c_neru/2-2.png" class="image-link">
+                  <img class="topic-img" src="img/research/c_neru/2-2.png">
+                </a> -->
+
+
+                <!-- <a href="img/research/c_neru/3-1.png" class="image-link">
+                  <img class="topic-img" src="img/research/c_neru/3-1.png">
+                </a> -->
+
+                <a href="img/research/c_neru/3-2.png" class="image-link">
+                  <img class="topic-img" src="img/research/c_neru/3-2.png">
+                </a>
+
+              </div>
+            </div>
+
+            <div class="col-lg-8 col-md-7">
               <p class="mb-4">
                 Computational neuroscience is a pivotal area of research that
                 seeks to unravel the complexities of the human
@@ -160,485 +229,575 @@
               </p>
             </div>
           </div>
-        </section>
+        </div>
+  </section>
 
-        <section id="c_micro">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12 mx-auto text-left">
-                <h2 class="section-heading">Computational Microscopy</h2>
-                <p class="mb-4">
-                  Computational microscopy is a transformative field that
-                  combines advanced imaging techniques with
-                  cutting-edge computational methods to enhance our ability to
-                  visualize and analyze biological specimens at
-                  unprecedented resolutions. By leveraging the power of AI and
-                  machine learning, computational microscopy
-                  enables the extraction of detailed quantitative information
-                  from complex and often noisy microscopic data,
-                  providing new insights into biological processes and disease
-                  mechanisms.
+  <section id="c_micro">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mx-auto text-left">
+          <h2 class="section-heading">Computational Microscopy</h2>
 
-                  At the AI4Health Lab, our research in computational microscopy
-                  focuses on developing innovative algorithms
-                  and models that address the challenges associated with modern
-                  microscopy techniques. Our work is
-                  particularly concentrated in three main areas:
-                  super-resolution imaging, automated image analysis, and image
-                  reconstruction from sparse or noisy data.
-                </p>
+          <div class="row topic-block align-items-start">
+            <div class="col-lg-4 col-md-5 mb-4 topic-sticky">
+              <div class="topic-gallery">
+                <a href="img/research/c_micro/1-1.jpg" class="image-link">
+                  <img class="topic-img" src="img/research/c_micro/1-1.jpg">
+                </a>
 
-                <h4>Automated Image Analysis</h4>
-                <p>
-                  Microscopy generates vast amounts of data, which can be
-                  time-consuming and challenging to analyze manually.
-                  To address this, we are developing automated image analysis
-                  pipelines that can accurately and efficiently
-                  process large-scale microscopy datasets. These pipelines
-                  utilize machine learning algorithms to perform
-                  tasks such as cell segmentation, classification, and tracking,
-                  allowing researchers to extract meaningful
-                  biological information from complex images with minimal human
-                  intervention. By automating these processes,
-                  we enable high-throughput analysis, accelerating discoveries
-                  in fields such as developmental biology and
-                  cancer research.
-                </p>
+                <a href="img/research/c_micro/2-1.png" class="image-link">
+                  <img class="topic-img" src="img/research/c_micro/2-1.png">
+                </a>
 
-                <h4>Image Reconstruction from Sparse or Noisy Data</h4>
-                <p>
-                  In many microscopy applications, data acquisition can be
-                  limited by factors such as low signal-to-noise
-                  ratio, incomplete sampling, or limited imaging time. Our
-                  research aims to overcome these limitations by
-                  developing computational methods that can reconstruct
-                  high-quality images from sparse or noisy data. By
-                  incorporating prior knowledge about the imaging system and the
-                  biological specimen into our models, we can
-                  enhance the quality of reconstructed images, revealing
-                  critical details that might otherwise be lost. This
-                  work is particularly relevant in live-cell imaging, where
-                  minimizing light exposure is essential to prevent
-                  photodamage, and in low-light imaging conditions, such as
-                  fluorescence microscopy.
-                </p>
-
-                <h4>Interdisciplinary Collaboration</h4>
-                <p>
-                  Our approach to computational microscopy is highly
-                  interdisciplinary, combining expertise in AI, computer
-                  vision, and microscopy with deep biological knowledge. We
-                  collaborate closely with biologists and clinicians
-                  to ensure that our models are not only technically robust but
-                  also aligned with the needs of end-users. This
-                  collaborative approach enables us to develop tools that are
-                  directly applicable to real-world biological and
-                  medical research, ultimately contributing to advancements in
-                  healthcare and life sciences.
-
-                  Through these research efforts, our goal is to push the
-                  boundaries of what is possible in microscopy,
-                  enabling scientists to explore the biological world in greater
-                  detail and with higher accuracy than ever
-                  before. The innovations we develop in computational microscopy
-                  have the potential to revolutionize how
-                  biological data is acquired, analyzed, and interpreted,
-                  leading to new discoveries and applications in
-                  fields ranging from basic research to clinical diagnostics.
-
-                </p>
               </div>
             </div>
-          </section>
 
-          <section id="c_multimodal">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12 mx-auto text-left">
-                  <h2 class="section-heading">Med Visual Language AI</h2>
-                  <p class="mb-4">
-                    Medical Vision-Language Artificial Intelligence (Med-VL AI)
-                    is an emerging interdisciplinary field at the intersection
-                    of computer vision, natural language processing, and medical
-                    informatics. Its core goal is to enable machines to
-                    understand, interpret, and generate clinically meaningful
-                    information by jointly modeling medical images (e.g.,
-                    X-rays, CT, MRI, pathology slides) and corresponding textual
-                    data (e.g., radiology reports, clinical notes, diagnostic
-                    queries).
+            <div class="col-lg-8 col-md-7">
+              <p class="mb-4">
+                Computational microscopy is a transformative field that
+                combines advanced imaging techniques with
+                cutting-edge computational methods to enhance our ability to
+                visualize and analyze biological specimens at
+                unprecedented resolutions. By leveraging the power of AI and
+                machine learning, computational microscopy
+                enables the extraction of detailed quantitative information
+                from complex and often noisy microscopic data,
+                providing new insights into biological processes and disease
+                mechanisms.
 
-                    Recent advancements in foundation models, contrastive
-                    learning, and multimodal pretraining have significantly
-                    improved performance across a wide range of tasks,
-                    including: Medical Report Generation, Visual Question
-                    Answering (VQA), Cross-modal Retrieval and Alignment,
-                    Knowledge-Guided Reasoning, etc. By bridging visual content
-                    with medical language, Med-VL AI has the potential to
-                    support clinical decision-making, improve diagnostic
-                    efficiency, and enable scalable, interpretable, and
-                    trustworthy AI solutions for real-world healthcare
-                    applications.
+                At the AI4Health Lab, our research in computational microscopy
+                focuses on developing innovative algorithms
+                and models that address the challenges associated with modern
+                microscopy techniques. Our work is
+                particularly concentrated in three main areas:
+                super-resolution imaging, automated image analysis, and image
+                reconstruction from sparse or noisy data.
+              </p>
 
-                  </p>
+              <h4>Automated Image Analysis</h4>
+              <p>
+                Microscopy generates vast amounts of data, which can be
+                time-consuming and challenging to analyze manually.
+                To address this, we are developing automated image analysis
+                pipelines that can accurately and efficiently
+                process large-scale microscopy datasets. These pipelines
+                utilize machine learning algorithms to perform
+                tasks such as cell segmentation, classification, and tracking,
+                allowing researchers to extract meaningful
+                biological information from complex images with minimal human
+                intervention. By automating these processes,
+                we enable high-throughput analysis, accelerating discoveries
+                in fields such as developmental biology and
+                cancer research.
+              </p>
 
-                  <h4>Medical Report Generation</h4>
-                  <p>
-                    Medical report generation is a critical task in the field
-                    of Med-VL AI, where the goal is to automatically
-                    generate comprehensive and accurate reports based on
-                    medical images. This task involves understanding the
-                    visual content of the images and translating that
-                    information into coherent and clinically relevant text.
-                    By leveraging advanced deep learning models, we aim to
-                    develop systems that can produce high-quality reports that
-                    assist healthcare professionals in their diagnostic and
-                    decision-making processes. The generated reports can also
-                    serve as valuable training data for further improving AI
-                    models, creating a virtuous cycle of continuous learning and
-                    enhancement.
-                    The challenge lies in ensuring that the generated text is
-                    not only accurate but also contextually appropriate and
-                    aligned with the specific medical domain. Our research
-                    focuses on developing models that can effectively capture
-                    the nuances of medical language, including terminology,
-                    abbreviations, and clinical context. By integrating
-                    multimodal data, such as images and associated clinical
-                    information, we aim to create a comprehensive
-                    representation that enhances the quality and relevance of
-                    the generated reports. 
-                    The potential applications of medical report
-                    generation are vast, ranging from assisting radiologists
-                    in image interpretation to providing decision support for
-                    clinicians in various specialties. By automating the
-                    report generation process, we aim to reduce the
-                    administrative burden on healthcare professionals, allowing
-                    them to focus on patient care.
-                  </p>
+              <h4>Image Reconstruction from Sparse or Noisy Data</h4>
+              <p>
+                In many microscopy applications, data acquisition can be
+                limited by factors such as low signal-to-noise
+                ratio, incomplete sampling, or limited imaging time. Our
+                research aims to overcome these limitations by
+                developing computational methods that can reconstruct
+                high-quality images from sparse or noisy data. By
+                incorporating prior knowledge about the imaging system and the
+                biological specimen into our models, we can
+                enhance the quality of reconstructed images, revealing
+                critical details that might otherwise be lost. This
+                work is particularly relevant in live-cell imaging, where
+                minimizing light exposure is essential to prevent
+                photodamage, and in low-light imaging conditions, such as
+                fluorescence microscopy.
+              </p>
 
-                  <h4>Medical Visual Question Answering (Medical VQA)</h4>
-                  <p>
-                    Medical Visual Question Answering (Medical VQA) is a
-                    specialized task within the Med-VL AI domain that
-                    focuses on enabling machines to answer questions related to
-                    medical images. This task requires a deep understanding of
-                    both the visual content of the images and the specific
-                    clinical context of the questions posed. By developing
-                    advanced models that can effectively process and analyze
-                    multimodal data, we aim to create systems that can provide
-                    accurate and contextually relevant answers to complex
-                    medical queries.
-                    The challenge of Medical VQA lies in the need to
-                    integrate information from multiple modalities, including
-                    images, text, and clinical knowledge. Our research focuses
-                    on developing models that can effectively fuse these
-                    modalities, allowing for a more comprehensive understanding
-                    of the medical context. By leveraging techniques such as
-                    attention mechanisms, graph neural networks, and
-                    multimodal embeddings, we aim to create systems that can
-                    accurately interpret and respond to a wide range of
-                    questions, from simple queries about anatomical structures
-                    to complex inquiries about disease progression and
-                    treatment options.
-                    The potential applications of Medical VQA are vast, ranging
-                    from assisting radiologists in image interpretation to
-                    providing decision support for clinicians in various
-                    specialties. By enabling machines to understand and
-                    respond to medical questions, we aim to enhance the
-                    efficiency and accuracy of clinical decision-making,
-                    ultimately improving patient outcomes. Our research in this
-                    area is driven by the goal of creating AI systems that can
-                    effectively bridge the gap between visual data and
-                    clinical knowledge, providing valuable insights and support
-                    to healthcare professionals.
-                  </p>
+              <h4>Interdisciplinary Collaboration</h4>
+              <p>
+                Our approach to computational microscopy is highly
+                interdisciplinary, combining expertise in AI, computer
+                vision, and microscopy with deep biological knowledge. We
+                collaborate closely with biologists and clinicians
+                to ensure that our models are not only technically robust but
+                also aligned with the needs of end-users. This
+                collaborative approach enables us to develop tools that are
+                directly applicable to real-world biological and
+                medical research, ultimately contributing to advancements in
+                healthcare and life sciences.
 
-                  <h4>Cross-modal Retrieval and Alignment</h4>
-                  <p>
-                    Cross-modal retrieval and alignment are essential
-                    components of our research in Med-VL AI. These tasks
-                    involve establishing connections between different
-                    modalities, such as aligning medical images with their
-                    corresponding textual descriptions or retrieving relevant
-                    images based on a given text query. By developing
-                    advanced algorithms for cross-modal retrieval, we aim to
-                    enhance the efficiency and accuracy of information access
-                    in healthcare settings. This capability is particularly
-                    valuable in scenarios where clinicians need to quickly find
-                    relevant images or reports to support their decision-making
-                    processes.  
-                    The challenge of cross-modal retrieval lies in the
-                    inherent differences between modalities, including
-                    variations in representation, scale, and semantic content.
-                    Our research focuses on developing models that can
-                    effectively bridge these gaps, allowing for seamless
-                    retrieval and alignment of multimodal data. By leveraging
-                    techniques such as contrastive learning, attention
-                    mechanisms, and multimodal embeddings, we aim to create
-                    systems that can accurately match images and text, enabling
-                    efficient information retrieval and enhancing the overall
-                    usability of AI systems in healthcare.
-                    The potential applications of cross-modal retrieval and
-                    alignment are vast, ranging from improving the efficiency
-                    of clinical workflows to enhancing the accuracy of
-                    diagnostic decision-making. By enabling seamless access to
-                    relevant information across modalities, we aim to empower
-                    healthcare professionals with the tools they need to make
-                    informed decisions quickly and effectively.
-                  </p>
-                  <h4>Knowledge-Guided Reasoning</h4>
-                  <p>
-                    Knowledge-guided reasoning is another critical aspect of
-                    Med-VL AI. By incorporating domain knowledge and
-                    ontologies into our models, we can enhance their ability to
-                    reason about complex medical scenarios. This approach
-                    enables the development of AI systems that can provide
-                    context-aware recommendations and insights, ultimately
-                    improving the interpretability and trustworthiness of AI
-                    solutions in healthcare.
-                    The challenge of knowledge-guided reasoning lies in the
-                    need to effectively integrate domain knowledge with
-                    multimodal data. Our research focuses on developing
-                    models that can leverage external knowledge sources,
-                    including medical ontologies, clinical guidelines, and
-                    literature, to enhance the reasoning capabilities of AI
-                    systems. By combining this knowledge with visual and
-                    textual data, we aim to create systems that can provide
-                    contextually relevant recommendations and insights, enabling
-                    more informed decision-making in clinical settings.
-                    The potential applications of knowledge-guided reasoning
-                    are vast, ranging from improving diagnostic accuracy to
-                    enhancing treatment planning and patient management. By
-                    enabling AI systems to reason about complex medical
-                    scenarios, we aim to enhance the interpretability and
-                    trustworthiness of AI solutions, ultimately improving
-                    patient outcomes.
-                  </p>
-                </div>
+                Through these research efforts, our goal is to push the
+                boundaries of what is possible in microscopy,
+                enabling scientists to explore the biological world in greater
+                detail and with higher accuracy than ever
+                before. The innovations we develop in computational microscopy
+                have the potential to revolutionize how
+                biological data is acquired, analyzed, and interpreted,
+                leading to new discoveries and applications in
+                fields ranging from basic research to clinical diagnostics.
+
+              </p>
+            </div>
+          </div>
+  </section>
+
+  <section id="c_multimodal">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mx-auto text-left">
+          <h2 class="section-heading">Med Visual Language AI</h2>
+
+
+          <div class="row topic-block align-items-start">
+            <div class="col-lg-4 col-md-5 mb-4 topic-sticky">
+              <div class="topic-gallery">
+                <a href="img/research/c_multimodal/1-1.png" class="image-link">
+                  <img class="topic-img" src="img/research/c_multimodal/1-1.png">
+                </a>
+
+                <a href="img/research/c_multimodal/1-2.png" class="image-link">
+                  <img class="topic-img" src="img/research/c_multimodal/1-2.png">
+                </a>
+
               </div>
-            </section>
+            </div>
 
-            <section id="c_paradigms">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-12 mx-auto text-left">
-                    <h2 class="section-heading">Deep Learning Paradigms</h2>
-                    <p class="mb-4">
-                      Deep learning paradigms are the foundational frameworks
-                      that underpin the development and application of
-                      artificial neural networks in various fields, particularly
-                      in areas that require complex pattern
-                      recognition, such as image analysis, natural language
-                      processing, and biomedical data analysis. These
-                      paradigms represent different approaches and architectures
-                      within deep learning, each designed to address
-                      specific types of problems and data structures.
+            <div class="col-lg-8 col-md-7">
 
-                      At the AI4Health Lab, our research is deeply rooted in
-                      exploring and advancing a variety of deep learning
-                      paradigms. By leveraging these paradigms, we aim to push
-                      the boundaries of what AI can achieve, particularly
-                      in the context of healthcare and biomedical research. Our
-                      work spans several key paradigms, including
-                      supervised learning, unsupervised learning, reinforcement
-                      learning, transfer learning, and generative
-                      models, each offering unique capabilities and advantages
-                      for specific applications.
-                    </p>
+              <p class="mb-4">
+                Medical Vision-Language Artificial Intelligence (Med-VL AI)
+                is an emerging interdisciplinary field at the intersection
+                of computer vision, natural language processing, and medical
+                informatics. Its core goal is to enable machines to
+                understand, interpret, and generate clinically meaningful
+                information by jointly modeling medical images (e.g.,
+                X-rays, CT, MRI, pathology slides) and corresponding textual
+                data (e.g., radiology reports, clinical notes, diagnostic
+                queries).
 
-                    <h4>Supervised Learning</h4>
-                    <p>
-                      Supervised learning is one of the most widely used
-                      paradigms in deep learning, where models are trained on
-                      labeled data to learn the mapping between input data and
-                      corresponding outputs. In our lab, we utilize
-                      supervised learning extensively for tasks such as image
-                      classification, segmentation, and disease
-                      prediction. By training models on large datasets of
-                      annotated medical images or clinical data, we develop AI
-                      systems that can accurately identify patterns indicative
-                      of diseases, such as cancer, cardiovascular
-                      conditions, and neurological disorders. The success of
-                      supervised learning in our research is enhanced by
-                      the careful curation and annotation of training data, as
-                      well as the implementation of advanced network
-                      architectures like Convolutional Neural Networks (CNNs)
-                      and fully connected networks.
-                    </p>
-                    <h4>Unsupervised Learning</h4>
-                    <p>
-                      Unsupervised learning, in contrast, deals with training
-                      models on data without explicit labels, aiming to
-                      discover hidden patterns or structures within the data.
-                      This paradigm is particularly valuable in situations
-                      where labeled data is scarce or unavailable. In our
-                      research, unsupervised learning is applied to tasks such
-                      as clustering, dimensionality reduction, and anomaly
-                      detection. For example, in the analysis of
-                      histopathology images, unsupervised learning techniques
-                      like autoencoders and generative adversarial
-                      networks (GANs) can be used to identify novel features or
-                      subtypes of diseases that are not immediately
-                      apparent through traditional analysis. This approach helps
-                      in uncovering new insights into disease
-                      mechanisms and patient stratification.
-                    </p>
-                    <h4>Transfer Learning</h4>
-                    <p>
-                      Transfer learning is a paradigm that allows models to
-                      leverage knowledge gained from one task or domain and
-                      apply it to another related task or domain. This approach
-                      is particularly useful in healthcare, where
-                      obtaining large labeled datasets for every specific task
-                      is often challenging. In our research, we employ
-                      transfer learning to adapt models trained on large,
-                      publicly available datasets, such as ImageNet, to
-                      specialized medical tasks like tumor detection or organ
-                      segmentation. By fine-tuning these pre-trained
-                      models on smaller, domain-specific datasets, we can
-                      achieve high performance even in data-limited scenarios,
-                      significantly reducing the time and resources needed for
-                      model development.
-                    </p>
-                    <h4>Generative Models</h4>
-                    <p>
-                      Generative models, including GANs and Variational
-                      Autoencoders (VAEs), are designed to generate new data
-                      samples that resemble a given dataset. These models have a
-                      wide range of applications, from data
-                      augmentation to simulating realistic medical images for
-                      training purposes. In our lab, we utilize generative
-                      models to create synthetic medical images that can be used
-                      to enhance the diversity and size of training
-                      datasets, particularly in cases where acquiring real
-                      medical data is difficult or costly. Generative models
-                      are also used for tasks such as image inpainting, where
-                      missing or corrupted parts of an image are
-                      reconstructed, and for generating plausible scenarios for
-                      disease progression modeling.
+                Recent advancements in foundation models, contrastive
+                learning, and multimodal pretraining have significantly
+                improved performance across a wide range of tasks,
+                including: Medical Report Generation, Visual Question
+                Answering (VQA), Cross-modal Retrieval and Alignment,
+                Knowledge-Guided Reasoning, etc. By bridging visual content
+                with medical language, Med-VL AI has the potential to
+                support clinical decision-making, improve diagnostic
+                efficiency, and enable scalable, interpretable, and
+                trustworthy AI solutions for real-world healthcare
+                applications.
 
-                      Advancing Healthcare through Deep Learning Paradigms:
-                      The ultimate goal of our research in deep learning
-                      paradigms is to enhance healthcare by providing AI tools
-                      that are accurate, interpretable, and reliable. Whether
-                      it’s through improving diagnostic accuracy,
-                      optimizing treatment plans, or uncovering new biological
-                      insights, our work in this area is driven by the
-                      potential to make a tangible impact on patient outcomes.
-                      By continuously exploring and advancing these
-                      paradigms, we aim to contribute to the ongoing revolution
-                      in healthcare, where AI plays an increasingly
-                      central role in delivering personalized, effective, and
-                      efficient care.
-                    </p>
-                  </div>
-                </div>
-              </section>
+              </p>
 
-              <section id="c_trustAI">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-lg-12 mx-auto text-left">
-                      <h2 class="section-heading">Trustworthy AI for
-                        Healthcare</h2>
-                      <p class="mb-4">
-                        Trustworthy AI for Healthcare
-                        In the rapidly evolving field of artificial
-                        intelligence, ensuring that AI systems are trustworthy
-                        is
-                        paramount, especially in healthcare, where decisions can
-                        directly impact patient lives. Trustworthy AI
-                        encompasses several critical attributes, including
-                        transparency, fairness, robustness, privacy, and
-                        accountability. These attributes are essential for
-                        developing AI systems that healthcare professionals and
-                        patients can rely on for safe and effective care.
+              <h4>Medical Report Generation</h4>
+              <p>
+                Medical report generation is a critical task in the field
+                of Med-VL AI, where the goal is to automatically
+                generate comprehensive and accurate reports based on
+                medical images. This task involves understanding the
+                visual content of the images and translating that
+                information into coherent and clinically relevant text.
+                By leveraging advanced deep learning models, we aim to
+                develop systems that can produce high-quality reports that
+                assist healthcare professionals in their diagnostic and
+                decision-making processes. The generated reports can also
+                serve as valuable training data for further improving AI
+                models, creating a virtuous cycle of continuous learning and
+                enhancement.
+                The challenge lies in ensuring that the generated text is
+                not only accurate but also contextually appropriate and
+                aligned with the specific medical domain. Our research
+                focuses on developing models that can effectively capture
+                the nuances of medical language, including terminology,
+                abbreviations, and clinical context. By integrating
+                multimodal data, such as images and associated clinical
+                information, we aim to create a comprehensive
+                representation that enhances the quality and relevance of
+                the generated reports.
+                The potential applications of medical report
+                generation are vast, ranging from assisting radiologists
+                in image interpretation to providing decision support for
+                clinicians in various specialties. By automating the
+                report generation process, we aim to reduce the
+                administrative burden on healthcare professionals, allowing
+                them to focus on patient care.
+              </p>
 
-                        At the AI4Health Lab, our research is dedicated to
-                        advancing the principles of trustworthy AI in
-                        healthcare.
-                        We recognize that the adoption of AI in clinical
-                        settings hinges on the trust that stakeholders—ranging
-                        from
-                        healthcare providers to patients—place in these systems.
-                        Our work focuses on developing AI models that not
-                        only perform accurately but also adhere to the highest
-                        standards of ethical practice and regulatory
-                        compliance.
-                      </p>
+              <h4>Medical Visual Question Answering (Medical VQA)</h4>
+              <p>
+                Medical Visual Question Answering (Medical VQA) is a
+                specialized task within the Med-VL AI domain that
+                focuses on enabling machines to answer questions related to
+                medical images. This task requires a deep understanding of
+                both the visual content of the images and the specific
+                clinical context of the questions posed. By developing
+                advanced models that can effectively process and analyze
+                multimodal data, we aim to create systems that can provide
+                accurate and contextually relevant answers to complex
+                medical queries.
+                The challenge of Medical VQA lies in the need to
+                integrate information from multiple modalities, including
+                images, text, and clinical knowledge. Our research focuses
+                on developing models that can effectively fuse these
+                modalities, allowing for a more comprehensive understanding
+                of the medical context. By leveraging techniques such as
+                attention mechanisms, graph neural networks, and
+                multimodal embeddings, we aim to create systems that can
+                accurately interpret and respond to a wide range of
+                questions, from simple queries about anatomical structures
+                to complex inquiries about disease progression and
+                treatment options.
+                The potential applications of Medical VQA are vast, ranging
+                from assisting radiologists in image interpretation to
+                providing decision support for clinicians in various
+                specialties. By enabling machines to understand and
+                respond to medical questions, we aim to enhance the
+                efficiency and accuracy of clinical decision-making,
+                ultimately improving patient outcomes. Our research in this
+                area is driven by the goal of creating AI systems that can
+                effectively bridge the gap between visual data and
+                clinical knowledge, providing valuable insights and support
+                to healthcare professionals.
+              </p>
 
-                      <h4> Transparency and Explainability</h4>
-                      <p>
-                        One of the core elements of trustworthy AI is
-                        transparency, which involves making AI systems
-                        understandable
-                        and interpretable to users. In healthcare, this means
-                        that AI-driven decisions should be explainable,
-                        enabling clinicians to understand the rationale behind a
-                        model’s prediction or recommendation. Our research
-                        emphasizes the development of interpretable AI models,
-                        particularly in critical applications such as
-                        diagnosis, treatment planning, and risk assessment. By
-                        employing techniques like attention mechanisms,
-                        feature attribution, and model simplification, we strive
-                        to create AI systems that provide clear,
-                        interpretable outputs that clinicians can easily
-                        validate and trust.
-                      </p>
-                      <h4>Fairness and Bias Mitigation</h4>
-                      <p>
-                        Fairness in AI is crucial to ensure that AI systems do
-                        not perpetuate or exacerbate existing biases in
-                        healthcare. Bias in AI models can lead to disparities in
-                        treatment outcomes across different patient groups,
-                        particularly in underrepresented populations. Our lab is
-                        actively engaged in identifying and mitigating
-                        biases in AI models through rigorous testing and
-                        validation processes. We develop and implement
-                        strategies
-                        such as fairness-aware learning, data balancing, and
-                        bias correction techniques to ensure that our AI
-                        systems deliver equitable healthcare outcomes for all
-                        patients, regardless of their demographic or
-                        socioeconomic background.
-                      </p>
-                      <h4>Robustness and Reliability</h4>
-                      <p>
-                        Robustness refers to an AI system’s ability to perform
-                        reliably across a wide range of conditions, including
-                        those not encountered during training. In healthcare,
-                        this means that AI models must maintain high
-                        performance even when faced with variations in data,
-                        such as different imaging protocols, patient
-                        populations, or unforeseen clinical scenarios. Our
-                        research focuses on enhancing the robustness of AI
-                        models
-                        through techniques such as adversarial training, data
-                        augmentation, and uncertainty quantification. By
-                        rigorously testing our models under diverse and
-                        challenging conditions, we aim to ensure that they are
-                        resilient and dependable in real-world clinical
-                        environments.
-                      </p>
-                    </div>
-                  </div>
-                </section>
+              <h4>Cross-modal Retrieval and Alignment</h4>
+              <p>
+                Cross-modal retrieval and alignment are essential
+                components of our research in Med-VL AI. These tasks
+                involve establishing connections between different
+                modalities, such as aligning medical images with their
+                corresponding textual descriptions or retrieving relevant
+                images based on a given text query. By developing
+                advanced algorithms for cross-modal retrieval, we aim to
+                enhance the efficiency and accuracy of information access
+                in healthcare settings. This capability is particularly
+                valuable in scenarios where clinicians need to quickly find
+                relevant images or reports to support their decision-making
+                processes.
+                The challenge of cross-modal retrieval lies in the
+                inherent differences between modalities, including
+                variations in representation, scale, and semantic content.
+                Our research focuses on developing models that can
+                effectively bridge these gaps, allowing for seamless
+                retrieval and alignment of multimodal data. By leveraging
+                techniques such as contrastive learning, attention
+                mechanisms, and multimodal embeddings, we aim to create
+                systems that can accurately match images and text, enabling
+                efficient information retrieval and enhancing the overall
+                usability of AI systems in healthcare.
+                The potential applications of cross-modal retrieval and
+                alignment are vast, ranging from improving the efficiency
+                of clinical workflows to enhancing the accuracy of
+                diagnostic decision-making. By enabling seamless access to
+                relevant information across modalities, we aim to empower
+                healthcare professionals with the tools they need to make
+                informed decisions quickly and effectively.
+              </p>
+              <h4>Knowledge-Guided Reasoning</h4>
+              <p>
+                Knowledge-guided reasoning is another critical aspect of
+                Med-VL AI. By incorporating domain knowledge and
+                ontologies into our models, we can enhance their ability to
+                reason about complex medical scenarios. This approach
+                enables the development of AI systems that can provide
+                context-aware recommendations and insights, ultimately
+                improving the interpretability and trustworthiness of AI
+                solutions in healthcare.
+                The challenge of knowledge-guided reasoning lies in the
+                need to effectively integrate domain knowledge with
+                multimodal data. Our research focuses on developing
+                models that can leverage external knowledge sources,
+                including medical ontologies, clinical guidelines, and
+                literature, to enhance the reasoning capabilities of AI
+                systems. By combining this knowledge with visual and
+                textual data, we aim to create systems that can provide
+                contextually relevant recommendations and insights, enabling
+                more informed decision-making in clinical settings.
+                The potential applications of knowledge-guided reasoning
+                are vast, ranging from improving diagnostic accuracy to
+                enhancing treatment planning and patient management. By
+                enabling AI systems to reason about complex medical
+                scenarios, we aim to enhance the interpretability and
+                trustworthiness of AI solutions, ultimately improving
+                patient outcomes.
+              </p>
+            </div>
+          </div>
+        </div>
+  </section>
 
-                <!-- Bootstrap core JavaScript -->
-                <script src="vendor/jquery/jquery.min.js"></script>
-                <script
-                  src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <section id="c_paradigms">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mx-auto text-left">
+          <h2 class="section-heading">Deep Learning Paradigms</h2>
 
-                <!-- Plugin JavaScript -->
-                <script
-                  src="vendor/jquery-easing/jquery.easing.min.js"></script>
-                <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-                <script
-                  src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+          <div class="row topic-block align-items-start">
+            <div class="col-lg-4 col-md-5 mb-4 topic-sticky">
+              <div class="topic-gallery">
+                <a href="img/research/c_5_paradigms/1-2.png" class="image-link">
+                  <img class="topic-img" src="img/research/c_5_paradigms/1-2.png">
+                </a>
 
-                <!-- Custom scripts for this template -->
-                <script src="js/creative.min.js"></script>
+                <a href="img/research/c_5_paradigms/1-3-1.png" class="image-link">
+                  <img class="topic-img" src="img/research/c_5_paradigms/1-3-1.png">
+                </a>
 
-                <script>
+                <a href="img/research/c_5_paradigms/1-3-2.png" class="image-link">
+                  <img class="topic-img" src="img/research/c_5_paradigms/1-3-2.png">
+                </a>
+
+                <a href="img/research/c_5_paradigms/2-1.png" class="image-link">
+                  <img class="topic-img" src="img/research/c_5_paradigms/2-1.png">
+                </a>
+
+                <a href="img/research/c_5_paradigms/2-2.png" class="image-link">
+                  <img class="topic-img" src="img/research/c_5_paradigms/2-2.png">
+                </a>
+
+                <a href="img/research/c_5_paradigms/3-1.png" class="image-link">
+                  <img class="topic-img" src="img/research/c_5_paradigms/3-1.png">
+                </a>
+                <a href="img/research/c_5_paradigms/3-2.png" class="image-link">
+                  <img class="topic-img" src="img/research/c_5_paradigms/3-2.png">
+                </a>
+
+              </div>
+            </div>
+
+            <div class="col-lg-8 col-md-7">
+
+              <p class="mb-4">
+                Deep learning paradigms are the foundational frameworks
+                that underpin the development and application of
+                artificial neural networks in various fields, particularly
+                in areas that require complex pattern
+                recognition, such as image analysis, natural language
+                processing, and biomedical data analysis. These
+                paradigms represent different approaches and architectures
+                within deep learning, each designed to address
+                specific types of problems and data structures.
+
+                At the AI4Health Lab, our research is deeply rooted in
+                exploring and advancing a variety of deep learning
+                paradigms. By leveraging these paradigms, we aim to push
+                the boundaries of what AI can achieve, particularly
+                in the context of healthcare and biomedical research. Our
+                work spans several key paradigms, including
+                supervised learning, unsupervised learning, reinforcement
+                learning, transfer learning, and generative
+                models, each offering unique capabilities and advantages
+                for specific applications.
+              </p>
+
+              <h4>Supervised Learning</h4>
+              <p>
+                Supervised learning is one of the most widely used
+                paradigms in deep learning, where models are trained on
+                labeled data to learn the mapping between input data and
+                corresponding outputs. In our lab, we utilize
+                supervised learning extensively for tasks such as image
+                classification, segmentation, and disease
+                prediction. By training models on large datasets of
+                annotated medical images or clinical data, we develop AI
+                systems that can accurately identify patterns indicative
+                of diseases, such as cancer, cardiovascular
+                conditions, and neurological disorders. The success of
+                supervised learning in our research is enhanced by
+                the careful curation and annotation of training data, as
+                well as the implementation of advanced network
+                architectures like Convolutional Neural Networks (CNNs)
+                and fully connected networks.
+              </p>
+              <h4>Unsupervised Learning</h4>
+              <p>
+                Unsupervised learning, in contrast, deals with training
+                models on data without explicit labels, aiming to
+                discover hidden patterns or structures within the data.
+                This paradigm is particularly valuable in situations
+                where labeled data is scarce or unavailable. In our
+                research, unsupervised learning is applied to tasks such
+                as clustering, dimensionality reduction, and anomaly
+                detection. For example, in the analysis of
+                histopathology images, unsupervised learning techniques
+                like autoencoders and generative adversarial
+                networks (GANs) can be used to identify novel features or
+                subtypes of diseases that are not immediately
+                apparent through traditional analysis. This approach helps
+                in uncovering new insights into disease
+                mechanisms and patient stratification.
+              </p>
+              <h4>Transfer Learning</h4>
+              <p>
+                Transfer learning is a paradigm that allows models to
+                leverage knowledge gained from one task or domain and
+                apply it to another related task or domain. This approach
+                is particularly useful in healthcare, where
+                obtaining large labeled datasets for every specific task
+                is often challenging. In our research, we employ
+                transfer learning to adapt models trained on large,
+                publicly available datasets, such as ImageNet, to
+                specialized medical tasks like tumor detection or organ
+                segmentation. By fine-tuning these pre-trained
+                models on smaller, domain-specific datasets, we can
+                achieve high performance even in data-limited scenarios,
+                significantly reducing the time and resources needed for
+                model development.
+              </p>
+              <h4>Generative Models</h4>
+              <p>
+                Generative models, including GANs and Variational
+                Autoencoders (VAEs), are designed to generate new data
+                samples that resemble a given dataset. These models have a
+                wide range of applications, from data
+                augmentation to simulating realistic medical images for
+                training purposes. In our lab, we utilize generative
+                models to create synthetic medical images that can be used
+                to enhance the diversity and size of training
+                datasets, particularly in cases where acquiring real
+                medical data is difficult or costly. Generative models
+                are also used for tasks such as image inpainting, where
+                missing or corrupted parts of an image are
+                reconstructed, and for generating plausible scenarios for
+                disease progression modeling.
+
+                Advancing Healthcare through Deep Learning Paradigms:
+                The ultimate goal of our research in deep learning
+                paradigms is to enhance healthcare by providing AI tools
+                that are accurate, interpretable, and reliable. Whether
+                it’s through improving diagnostic accuracy,
+                optimizing treatment plans, or uncovering new biological
+                insights, our work in this area is driven by the
+                potential to make a tangible impact on patient outcomes.
+                By continuously exploring and advancing these
+                paradigms, we aim to contribute to the ongoing revolution
+                in healthcare, where AI plays an increasingly
+                central role in delivering personalized, effective, and
+                efficient care.
+              </p>
+            </div>
+          </div>
+        </div>
+  </section>
+
+  <section id="c_trustAI">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mx-auto text-left">
+          <h2 class="section-heading">Trustworthy AI for
+            Healthcare</h2>
+
+                      <div class="row topic-block align-items-start">
+            <div class="col-lg-4 col-md-5 mb-4 topic-sticky">
+              <div class="topic-gallery">
+                <a href="img/research/c_6_trustAI/1-0.png" class="image-link">
+                  <img class="topic-img" src="img/research/c_6_trustAI/1-0.png">
+                </a>
+
+                <!-- <a href="img/research/c_6_trustAI/1-1.png" class="image-link">
+                  <img class="topic-img" src="img/research/c_6_trustAI/1-1.png">
+                </a> -->
+                <a href="img/research/c_6_trustAI/1-2.png" class="image-link">
+                  <img class="topic-img" src="img/research/c_6_trustAI/1-2.png">
+                </a>
+
+              </div>
+            </div>
+
+            <div class="col-lg-8 col-md-7">
+          <p class="mb-4">
+            Trustworthy AI for Healthcare
+            In the rapidly evolving field of artificial
+            intelligence, ensuring that AI systems are trustworthy
+            is
+            paramount, especially in healthcare, where decisions can
+            directly impact patient lives. Trustworthy AI
+            encompasses several critical attributes, including
+            transparency, fairness, robustness, privacy, and
+            accountability. These attributes are essential for
+            developing AI systems that healthcare professionals and
+            patients can rely on for safe and effective care.
+
+            At the AI4Health Lab, our research is dedicated to
+            advancing the principles of trustworthy AI in
+            healthcare.
+            We recognize that the adoption of AI in clinical
+            settings hinges on the trust that stakeholders—ranging
+            from
+            healthcare providers to patients—place in these systems.
+            Our work focuses on developing AI models that not
+            only perform accurately but also adhere to the highest
+            standards of ethical practice and regulatory
+            compliance.
+          </p>
+
+          <h4> Transparency and Explainability</h4>
+          <p>
+            One of the core elements of trustworthy AI is
+            transparency, which involves making AI systems
+            understandable
+            and interpretable to users. In healthcare, this means
+            that AI-driven decisions should be explainable,
+            enabling clinicians to understand the rationale behind a
+            model’s prediction or recommendation. Our research
+            emphasizes the development of interpretable AI models,
+            particularly in critical applications such as
+            diagnosis, treatment planning, and risk assessment. By
+            employing techniques like attention mechanisms,
+            feature attribution, and model simplification, we strive
+            to create AI systems that provide clear,
+            interpretable outputs that clinicians can easily
+            validate and trust.
+          </p>
+          <h4>Fairness and Bias Mitigation</h4>
+          <p>
+            Fairness in AI is crucial to ensure that AI systems do
+            not perpetuate or exacerbate existing biases in
+            healthcare. Bias in AI models can lead to disparities in
+            treatment outcomes across different patient groups,
+            particularly in underrepresented populations. Our lab is
+            actively engaged in identifying and mitigating
+            biases in AI models through rigorous testing and
+            validation processes. We develop and implement
+            strategies
+            such as fairness-aware learning, data balancing, and
+            bias correction techniques to ensure that our AI
+            systems deliver equitable healthcare outcomes for all
+            patients, regardless of their demographic or
+            socioeconomic background.
+          </p>
+          <h4>Robustness and Reliability</h4>
+          <p>
+            Robustness refers to an AI system’s ability to perform
+            reliably across a wide range of conditions, including
+            those not encountered during training. In healthcare,
+            this means that AI models must maintain high
+            performance even when faced with variations in data,
+            such as different imaging protocols, patient
+            populations, or unforeseen clinical scenarios. Our
+            research focuses on enhancing the robustness of AI
+            models
+            through techniques such as adversarial training, data
+            augmentation, and uncertainty quantification. By
+            rigorously testing our models under diverse and
+            challenging conditions, we aim to ensure that they are
+            resilient and dependable in real-world clinical
+            environments.
+          </p>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/creative.min.js"></script>
+
+  <script>
     fetch("my_navbar.html")
       .then(res => res.text())
       .then(data => {
@@ -652,7 +811,7 @@
       });
   </script>
 
-                <script>
+  <script>
     document.querySelectorAll('a[href^="#"], a[href^="1_research.html#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         const hash = this.getAttribute('href').split('#')[1];
@@ -665,8 +824,8 @@
     });
   </script>
 
-                <div id="footer-placeholder"></div>
-                <script>
+  <div id="footer-placeholder"></div>
+  <script>
     fetch("my_footer.html")
       .then(res => res.text())
       .then(data => {
@@ -674,6 +833,6 @@
       });
   </script>
 
-              </body>
+</body>
 
-            </html>
+</html>
