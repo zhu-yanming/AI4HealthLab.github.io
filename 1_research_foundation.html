@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+<head id="head-placeholder"></head>
+<script>
+  fetch('my_head.html')
+    .then(res => res.text())
+    .then(data => {
+      document.head.innerHTML = data;
+    });
+</script> -->
+
+<head>
+  <style>
+    body {
+      opacity: 0;
+    }
+  </style>
+  <script>
+    fetch('my_head.html')
+      .then(res => res.text())
+      .then(data => {
+        document.head.innerHTML = data;
+        document.body.style.opacity = '1';
+        document.body.style.transition = 'opacity 0.3s';
+      });
+  </script>
+</head>
+
+<body id="page_top">
+  <div id="navbar-placeholder"></div>
+
+  <section id="c_foundation">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mx-auto text-left px-0">
+          <h2 class="section-heading">
+            <a href="1_research.html#visual-section" style="color: inherit; text-decoration: none; display: inline-block;">
+              <i class="fas fa-layer-group fa-fw text-muted mr-2"></i>
+              Foundational Vision and Learning Systems</a>
+          </h2>
+        </div>
+      </div>
+
+      <div class="row topic-block align-items-start">
+        <div class="col-lg-4 col-md-5 mb-4 topic-sticky">
+          <div class="topic-gallery">
+            <a href="img/research/c_5_foundation/foundation_overview_small.jpg" class="image-link">
+              <img class="topic-img" src="img/research/c_5_foundation/foundation_overview_small.jpg">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-8 col-md-7">
+          <p>
+           Beyond healthcare applications, we explore core computer vision and deep learning methods that enable general-purpose visual intelligence. This includes generative modelling, 3D reconstruction, adversarial sample generation, privacy preserving learning, and cross-domain adaptation. These methods form the algorithmic backbone that powers our applied research in medical and biological AI. Specific research topics include:
+          </p>
+          <ul style="list-style-type: none; padding-left: 16px; margin-top: 0.6rem;">
+            <li class="mb-2">
+              <a href="#eeg-decoding"
+                style="text-decoration: none; display: block; background-color: #f8f9fa; padding: 0.6rem; border-radius: 6px; border-left: 4px solid #004c97; transition: all 0.18s ease;">
+                <div style="color: #004c97; font-size: 0.95rem; font-weight: 600;">
+                  Image Enhancement and Generation
+                </div>
+              </a>
+            </li>
+
+            <li class="mb-2">
+              <a href="#fmri-diagnosis"
+                style="text-decoration: none; display: block; background-color: #f8f9fa; padding: 0.6rem; border-radius: 6px; border-left: 4px solid #004c97; transition: all 0.18s ease;">
+                <div style="color: #004c97; font-size: 0.95rem; font-weight: 600;">
+                  3D Reconstruction and Super-Resolution
+                </div>
+              </a>
+            </li>
+
+            <li class="mb-2">
+              <a href="#fmri-diagnosis"
+                style="text-decoration: none; display: block; background-color: #f8f9fa; padding: 0.6rem; border-radius: 6px; border-left: 4px solid #004c97; transition: all 0.18s ease;">
+                <div style="color: #004c97; font-size: 0.95rem; font-weight: 600;">
+                  Adversarial Sample Generation
+                </div>
+              </a>
+            </li>
+
+            <li class="mb-2">
+              <a href="#fmri-diagnosis"
+                style="text-decoration: none; display: block; background-color: #f8f9fa; padding: 0.6rem; border-radius: 6px; border-left: 4px solid #004c97; transition: all 0.18s ease;">
+                <div style="color: #004c97; font-size: 0.95rem; font-weight: 600;">
+                  Privacy Preserving Learning
+                </div>
+              </a>
+            </li>
+
+            <li class="mb-2">
+              <a href="#fmri-diagnosis"
+                style="text-decoration: none; display: block; background-color: #f8f9fa; padding: 0.6rem; border-radius: 6px; border-left: 4px solid #004c97; transition: all 0.18s ease;">
+                <div style="color: #004c97; font-size: 0.95rem; font-weight: 600;">
+                  Unsupervised Domain Adaption
+                </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/creative.min.js"></script>
+
+  <script>
+    fetch("my_navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll(".nav-link[data-page]").forEach(link => {
+          if (link.getAttribute("data-page") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      });
+  </script>
+
+  <script>
+    document.querySelectorAll('a[href^="#"], a[href^="1_research.html#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const hash = this.getAttribute('href').split('#')[1];
+        const target = document.getElementById(hash);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("my_footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+
+</body>
+
+</html>
