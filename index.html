@@ -1,6 +1,8 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- 
 <head id="head-placeholder"></head>
 <script>
   fetch('my_head.html')
@@ -8,13 +10,26 @@
     .then(data => {
       document.head.innerHTML = data;
     });
-</script>
-
+</script> -->
+<head>
+    <style>
+        body { opacity: 0; }
+    </style>
+    <script>
+        fetch('my_head.html')
+            .then(res => res.text())
+            .then(data => {
+                document.head.innerHTML = data;
+                document.body.style.opacity = '1';
+                document.body.style.transition = 'opacity 0.3s';
+            });
+    </script>
+</head>
 
 <body id="page_top">
-
   <div id="navbar-placeholder"></div>
 
+  
   <section id="welcome-section">
     <div class="container">
       <div class="row">
@@ -51,15 +66,8 @@
       </div>
   </section>
 
-  <!-- <section id="visual-section">
-  <div class="container-plotInIndex">
-    <div id="p5-sketch"></div>
-  </div>
-  </section> -->
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
   <script src="js/plot_disgram.js"></script>
-
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>

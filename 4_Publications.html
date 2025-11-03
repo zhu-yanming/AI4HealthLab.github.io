@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+<!-- 
 <head id="head-placeholder"></head>
 <script>
   fetch('my_head.html')
@@ -8,7 +10,21 @@
     .then(data => {
       document.head.innerHTML = data;
     });
-</script>
+</script> -->
+<head>
+    <style>
+        body { opacity: 0; }
+    </style>
+    <script>
+        fetch('my_head.html')
+            .then(res => res.text())
+            .then(data => {
+                document.head.innerHTML = data;
+                document.body.style.opacity = '1';
+                document.body.style.transition = 'opacity 0.3s';
+            });
+    </script>
+</head>
 
 
 <body id="page_top">
