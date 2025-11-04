@@ -22,33 +22,33 @@ let sections = [
   },
 
   {
-    label: "Deep Learning Paradigms",
-    url: "1_research.html#c_paradigms",
+    label: "Foundational Vision and Learning Systems",
+    url: "1_research_foundation.html",
     iconPath: "img/icons/deeplearning.png"
   },
   {
-    label: "Multimodal Data Integration",
-    url: "1_research.html#c_multimodal",
+    label: "Medical Visual Language AI",
+    url: "1_research_multimodal.html",
     iconPath: "img/icons/med-vlm.png"
   },
   {
     label: "Trustworthy AI for Healthcare",
-    url: "1_research.html#c_trustAI",
+    url: "1_research_trustAI.html",
     iconPath: "img/icons/trustworthy.png"
   },
   {
     label: "Computational Microscopy",
-    url: "1_research.html#c_micro",
+    url: "1_research_micro.html",
     iconPath: "img/icons/microscopy.png"
   },
   {
     label: "Computational Histopathology",
-    url: "1_research.html#c_hist",
+    url: "1_research_hist.html",
     iconPath: "img/icons/histopathology.png"
   },
   {
     label: "Computational Neuroscience",
-    url: "1_research.html#c_neru",
+    url: "1_research_neru.html",
     iconPath: "img/icons/neuroscience.png"
   }
 ];
