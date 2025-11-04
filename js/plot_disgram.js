@@ -17,7 +17,7 @@ let logoHovered = false;
 let sections = [
   {
     label: "AI4Health",
-    url: "index.html#page_top",
+    url: "1_research.html#page_top",
     iconPath: "img/icons/Ai4Health_.png"
   },
 
@@ -161,7 +161,7 @@ function mousePressed() {
       mouseY <= cy + logoH / 2
     ) {
       // 跳转到页面顶部锚点
-      window.location.href = "index.html#page_top";
+      window.location.href = "1_research.html#page_top";
     }
   }
 }
