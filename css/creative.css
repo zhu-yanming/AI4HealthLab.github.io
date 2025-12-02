@@ -541,8 +541,9 @@ img::selection {
 
 .news-list {
   margin-top: 20px;
-  text-align: left;
-  max-width: 90%;
+  /* text-align: left; */
+  text-align: left !important;
+  /* max-width: 90%; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -555,6 +556,7 @@ img::selection {
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
   border-left: 4px solid #2b6cb0;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left !important;
 }
 
 .news-item:hover {
