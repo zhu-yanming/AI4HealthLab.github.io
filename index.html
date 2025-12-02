@@ -11,59 +11,111 @@
       document.head.innerHTML = data;
     });
 </script> -->
+
 <head>
-    <style>
-        body { opacity: 0; }
-    </style>
-    <script>
-        fetch('my_head.html')
-            .then(res => res.text())
-            .then(data => {
-                document.head.innerHTML = data;
-                document.body.style.opacity = '1';
-                document.body.style.transition = 'opacity 0.3s';
-            });
-    </script>
+  <style>
+    body {
+      opacity: 0;
+    }
+  </style>
+  <script>
+    fetch('my_head.html')
+      .then(res => res.text())
+      .then(data => {
+        document.head.innerHTML = data;
+        document.body.style.opacity = '1';
+        document.body.style.transition = 'opacity 0.3s';
+      });
+  </script>
 </head>
 
 <body id="page_top">
   <div id="navbar-placeholder"></div>
 
-  
+
   <section id="welcome-section">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 mx-auto text-left">
-          <h2 class="section-heading-noBackground text-center">AI4Health
-            Lab</h2>
+          <h2 class="section-heading-noBackground text-center">AI4Health Lab</h2>
 
-          <p>AI4Health Lab is an interdisciplinary research group based in the School of Information and Communication
-            Technology at Griffith University. Positioned at the intersection of artificial intelligence, biomedical
-            imaging, and digital health, our mission is to advance AI-driven technologies that address critical
-            challenges in modern healthcare, with a strong emphasis on robustness, interpretability, privacy
-            preservation, and clinical relevance. We bring together expertise across computer vision, deep learning,
-            medical imaging, computational pathology, neuroscience, and health informatics.
-            Committed to excellence and innovation, we strive to address major
-            challenges in contemporary medicine and public health through the
-            deep integration of AI and health sciences. Our research spans
-            computational pathology, computational neuroscience, computational
-            microscopy imaging, bio-health multimodal data integration, deep
-            learning paradigms, and trustworthy AI for healthcare. We are
-            dedicated to tackling core challenges in precision and intelligent
-            medicine, enhancing the accuracy of disease diagnosis, optimizing
-            personalized treatment plans, and advancing the fairness and
-            explainability of medical decisions. With our interdisciplinary
-            research team and exceptional innovation capabilities, AI4Health is committed to translating cutting-edge
-            research into real-world impact through close collaboration with hospitals, research institutes, and
-            industry partners, driving innovation from the lab to the clinic and beyond.
-          </p>
-          
           <div class="container-plotInIndex">
             <div id="p5-sketch"></div>
           </div>
 
+          <p><b>AI4Health Lab</b> is an interdisciplinary research group based in the School of Information and
+            Communication Technology at <a
+              href="https://www.griffith.edu.au/griffith-sciences/school-information-communication-technology"><strong>Griffith
+                University</strong></a>. We advance AI-driven solutions for modern healthcare with a focus on
+            robustness, interpretability, privacy preservation, and clinical relevance. Our expertise spans computer
+            vision, deep learning, medical imaging, computational pathology, neuroscience, and health informatics.
+            Through close collaboration with hospitals, research institutes, and industry partners, we translate
+            cutting-edge research into real-world impact, driving innovation across precision medicine, disease
+            diagnosis, personalized treatment, and trustworthy healthcare AI.
+          </p>
+          <p> </p>
         </div>
       </div>
+  </section>
+
+  <section id="contact" style="box-shadow:0 -4px 10px rgba(0,0,0,0.1);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mx-auto text-center">
+          <!-- <h2 class="section-heading">Contact us</h2> -->
+          <p> </p>
+          <div class="text-center">
+            <img src="img/people/team_happy_1.jpg" class="img-fluid" alt="AI4Health"
+              style="border-radius: 12px; box-shadow: 0 6px 24px rgba(0,0,0,.08); max-width: 100%; height: auto;">
+          </div>
+
+          <p> </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="contact" style="box-shadow:0 -4px 10px rgba(0,0,0,0.1);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mx-auto text-center">
+          <h2 class="section-heading">Latest News</h2>
+          <div class="news-list">
+
+            <div class="news-item">
+              <span class="news-date">2025</span>
+              Team members are recognised among the World's Top 2 Percent Scientists according to the Stanford University
+              global ranking.
+              <a href="#" class="news-toggle">Click for more Info</a>
+
+              <div class="news-details">
+                <p>
+                  <a href="https://topscinet.com/scientist_profile/Liew,%20Alan%20Wee%20Chung/1994/?stype=career_data"
+                    target="_blank" rel="noopener noreferrer">
+                    Liew, Alan Wee Chung - Career-Long Impact
+                  </a>
+                </p>
+                 <p>
+                  <a href="https://topscinet.com/scientist_profile/Yin,%20Xuefei/2015/?stype=single_year"
+                    target="_blank" rel="noopener noreferrer">
+                    Yin, Xuefei - Single-Year Impact 
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div class="news-item">
+              <span class="news-date">2025</span>
+              <strong>[AAAI x2]</strong> Two papers were accepted at AAAI-26 (CORE A* / CCF A)
+              <!-- <a href="#" class="news-link">Read More</a> -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
@@ -104,6 +156,24 @@
       });
   </script>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggles = document.querySelectorAll(".news-toggle");
+
+      toggles.forEach(toggle => {
+        toggle.addEventListener("click", function (e) {
+          e.preventDefault();
+          const details = this.nextElementSibling;
+
+          details.classList.toggle("open");
+
+          this.textContent = details.classList.contains("open")
+            ? "Hide Info"
+            : "Click for more Info";
+        });
+      });
+    });
+  </script>
 
 </body>
 
