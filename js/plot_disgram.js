@@ -17,7 +17,7 @@ let logoHovered = false;
 let sections = [
   {
     label: "AI4Health",
-    url: "1_research.html#page_top",
+    url: "index.html#page_top",
     iconPath: "img/icons/Ai4Health_.png"
   },
 
